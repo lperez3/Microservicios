@@ -34,27 +34,7 @@ public class PersonController {
 
   @Autowired
   private PersonService personService;
-
-  @ApiOperation(value="Este método saluda a un usuario")
-  @ApiResponses(value = {
-      @ApiResponse(code = 200, message = "Llamada ejecutada correctamente"),
-      @ApiResponse(code = 500, message = "Error inesperado"),
-  })
-//  @GetMapping("/hello/{name}")
-//  public String hello(@ApiParam(value="El usuario a saludar") @PathVariable(name="name") String name) {
-//    return "Hello " + name;
-//  }
-//
-//  @GetMapping("/list/{id}")
-//  public PersonDto findPerson(@PathVariable(name="id") String id) {
-//    return personService.getByName(id);
-//  }
-//
-//  @GetMapping("/list")
-//  public List<PersonDto> listPersons() {
-//    return personService.getAllPersons();
-//  }
-  
+ 
     @PostMapping
     @Transactional
 	public ResponseEntity<Void> createPerson(@RequestBody PersonDto personDto) {
