@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping(path="/person")
+@RequestMapping(path="/persons")
 public class PersonController {
 
   @Autowired
